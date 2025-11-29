@@ -1,4 +1,5 @@
 1. Instalación y Configuración ⚙️
+
 1.1 Requisitos Previos
 
 Se debe tener:
@@ -13,15 +14,20 @@ Android Studio o VS Code
 Emulador Android o dispositivo físico
 
 1.2 Clonar el Repositorio
+
 git clone <https://github.com/Dandres619/PrimeDesk-Movil.git>
+
 cd nombre-del-proyecto
 
 1.3 Instalar Dependencias
 flutter pub get
 
 1.4 Ejecutar la Aplicación
+
 flutter run
+
 o simplemente presionando F5 en tu editor.
+
 
 2. Arquitectura del Proyecto 🏗️
 
@@ -35,6 +41,7 @@ lib/
 Esta separación facilita la escalabilidad, la organización y el reemplazo futuro de mock data por una API real.
 
 3. Estructura y Responsabilidades 📁
+
 lib/
 ├── main.dart
 ├── data/
@@ -45,6 +52,7 @@ lib/
 └── presentation/
     ├── screens/
     └── widgets/
+
 
 3.1 /data/
 
