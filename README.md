@@ -16,7 +16,7 @@ Se debe tener:
 
 ```bash
 git clone https://github.com/Dandres619/PrimeDesk-Movil.git
-cd nombre-del-proyecto
+cd PrimeDesk-Movil-main
 ```
 
 ### 1.3 Instalar Dependencias
