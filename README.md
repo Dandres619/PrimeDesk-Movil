@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PrimeDesk Mobile
 
 ## 1. Instalación y Configuración ⚙️
@@ -19,7 +18,6 @@ Se debe tener:
 
 ### 1.2 Clonar el Repositorio
 
-<<<<<<< HEAD
 ```bash
 git clone https://github.com/Dandres619/PrimeDesk-Movil.git
 =======
@@ -40,7 +38,6 @@ cd nombre-del-proyecto
 flutter pub get
 ```
 
-<<<<<<< HEAD
 ### 1.4 Ejecutar la Aplicación
 
 ```bash
@@ -73,7 +70,6 @@ lib/
 
 Esta separación facilita la **escalabilidad**, la **organización** y el **reemplazo futuro** de mock data por una API real.
 
-<<<<<<< HEAD
 ---
 
 ## 3. Estructura y Responsabilidades 📁
@@ -94,7 +90,6 @@ lib/
     └── widgets/
 ```
 
-<<<<<<< HEAD
 ### 3.1 `/data/`
 =======
 
@@ -181,7 +176,6 @@ El proyecto utiliza:
 
 ### Flujo estándar:
 
-<<<<<<< HEAD
 1. Un **Notifier** contiene el estado (lista de productos, usuarios, …)
 2. La **UI** consume el estado vía `Consumer` o `Provider.of`
 3. Si cambia algo → `notifyListeners()` → la **UI se reconstruye automáticamente**
