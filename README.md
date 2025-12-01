@@ -1,40 +1,58 @@
-1. Instalación y Configuración ⚙️
-1.1 Requisitos Previos
+# PrimeDesk Mobile
+
+## 1. Instalación y Configuración ⚙️
+
+### 1.1 Requisitos Previos
 
 Se debe tener:
 
-Flutter SDK (recomendado 3.x o superior)
-https://docs.flutter.dev/get-started/install
+- **Flutter SDK** (recomendado 3.x o superior)
+  - https://docs.flutter.dev/get-started/install
+- **Dart** (incluido en Flutter)
+- **Android Studio** o **VS Code**
+- **Emulador Android** o dispositivo físico
 
-Dart (incluido en Flutter)
+### 1.2 Clonar el Repositorio
 
-Android Studio o VS Code
-
-Emulador Android o dispositivo físico
-
-1.2 Clonar el Repositorio
-git clone <https://github.com/Dandres619/PrimeDesk-Movil.git>
+```bash
+git clone https://github.com/Dandres619/PrimeDesk-Movil.git
 cd nombre-del-proyecto
+```
 
-1.3 Instalar Dependencias
+### 1.3 Instalar Dependencias
+
+```bash
 flutter pub get
+```
 
-1.4 Ejecutar la Aplicación
+### 1.4 Ejecutar la Aplicación
+
+```bash
 flutter run
-o simplemente presionando F5 en tu editor.
+```
 
-2. Arquitectura del Proyecto 🏗️
+O simplemente presionando **F5** en tu editor.
 
-El proyecto utiliza una estructura inspirada en Clean Architecture:
+---
 
+## 2. Arquitectura del Proyecto 🏗️
+
+El proyecto utiliza una estructura inspirada en **Clean Architecture**:
+
+```
 lib/
 ├── data/
 ├── domain/
 └── presentation/
+```
 
-Esta separación facilita la escalabilidad, la organización y el reemplazo futuro de mock data por una API real.
+Esta separación facilita la **escalabilidad**, la **organización** y el **reemplazo futuro** de mock data por una API real.
 
-3. Estructura y Responsabilidades 📁
+---
+
+## 3. Estructura y Responsabilidades 📁
+
+```
 lib/
 ├── main.dart
 ├── data/
@@ -45,119 +63,91 @@ lib/
 └── presentation/
     ├── screens/
     └── widgets/
+```
 
-3.1 /data/
+### 3.1 `/data/`
 
-Contiene los modelos del dominio y los datos mock usados para pruebas locales.
+Contiene los **modelos del dominio** y los **datos mock** usados para pruebas locales.
 
 Incluye entidades como:
 
-Usuarios
+- Usuarios
+- Productos
+- Motos
+- Proveedores
+- Categorías
+- Pedidos de servicios
+- Compras y ventas
+- Horarios
 
-Productos
+Los datos mock permiten ejecutar toda la aplicación **sin backend**.
 
-Motos
+### 3.2 `/domain/providers/`
 
-Proveedores
-
-Categorías
-
-Pedidos de servicios
-
-Compras y ventas
-
-Horarios
-
-Los datos mock permiten ejecutar toda la aplicación sin backend.
-
-3.2 /domain/providers/
-
-Aloja la capa de lógica de negocio mediante Notifiers (manejo de estado).
+Aloja la **capa de lógica de negocio** mediante Notifiers (manejo de estado).
 
 Ejemplos de notifiers:
 
-auth_notifier.dart
-
-user_management_notifier.dart
-
-appointment_notifier.dart
-
-category_notifier.dart
-
-cart_notifier.dart
-
-etc.
+- `auth_notifier.dart`
+- `user_management_notifier.dart`
+- `appointment_notifier.dart`
+- `category_notifier.dart`
+- `cart_notifier.dart`
+- etc.
 
 Cada Notifier:
 
-gestiona datos en memoria,
+- Gestiona datos en memoria
+- Expone estados a la UI
+- Notifica cambios mediante `notifyListeners()`
 
-expone estados a la UI,
+Es un enfoque **simple**, **robusto** y **perfecto** para CRUD y dashboards administrativos.
 
-y notifica cambios mediante notifyListeners().
+### 3.3 `/presentation/`
 
-Es un enfoque simple, robusto y perfecto para CRUD y dashboards administrativos.
+Contiene la **interfaz de usuario (UI)**.
 
-3.3 /presentation/
-
-Contiene la interfaz de usuario (UI).
-
-/screens/
+#### `/screens/`
 
 Pantallas principales del sistema, como:
 
-Agendamientos
+- Agendamientos
+- Categorías
+- Clientes
+- Compras
+- Horarios
+- Motos
+- Pedidos de Servicios
+- Proveedores
+- Productos
+- Usuarios
+- Ventas
+- Home
+- Login
 
-Categorías
-
-Clientes
-
-Compras
-
-Horarios
-
-Motos
-
-Pedidos de Servicios
-
-Proveedores
-
-Productos
-
-Usuarios
-
-Ventas
-
-Home
-
-Login
-
-/widgets/
+#### `/widgets/`
 
 Componentes reutilizables, por ejemplo:
 
-custom_app_bar.dart
+- `custom_app_bar.dart`
 
-4. Arquitectura de Estados 🔄
+---
+
+## 4. Arquitectura de Estados 🔄
 
 El proyecto utiliza:
 
-Provider + ChangeNotifier
+**Provider + ChangeNotifier**
 
-Ventajas:
+### Ventajas:
 
-Estado reactivo fácil de implementar
+- ✅ Estado reactivo fácil de implementar
+- ✅ Separación clara UI / lógica
+- ✅ Excelente para CRUD administrativos
+- ✅ Curva de aprendizaje baja
 
-Separación clara UI / lógica
+### Flujo estándar:
 
-Excelente para CRUD administrativos
-
-Curva de aprendizaje baja
-
-Flujo estándar:
-
-Un Notifier contiene el estado (lista de productos, usuarios,…)
-
-La UI consume el estado vía Consumer o Provider.of
-
-Si cambia algo → notifyListeners() → la UI se reconstruye automáticamente
+1. Un **Notifier** contiene el estado (lista de productos, usuarios, …)
+2. La **UI** consume el estado vía `Consumer` o `Provider.of`
+3. Si cambia algo → `notifyListeners()` → la **UI se reconstruye automáticamente**
