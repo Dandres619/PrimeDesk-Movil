@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 # PrimeDesk Mobile
 
 ## 1. Instalación y Configuración ⚙️
 
 ### 1.1 Requisitos Previos
-=======
-1. Instalación y Configuración ⚙️
-
-1.1 Requisitos Previos
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
 
 Se debe tener:
 
@@ -20,19 +14,8 @@ Se debe tener:
 
 ### 1.2 Clonar el Repositorio
 
-<<<<<<< HEAD
 ```bash
 git clone https://github.com/Dandres619/PrimeDesk-Movil.git
-=======
-Android Studio o VS Code
-
-Emulador Android o dispositivo físico
-
-1.2 Clonar el Repositorio
-
-git clone <https://github.com/Dandres619/PrimeDesk-Movil.git>
-
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
 cd nombre-del-proyecto
 ```
 
@@ -42,7 +25,6 @@ cd nombre-del-proyecto
 flutter pub get
 ```
 
-<<<<<<< HEAD
 ### 1.4 Ejecutar la Aplicación
 
 ```bash
@@ -50,16 +32,6 @@ flutter run
 ```
 
 O simplemente presionando **F5** en tu editor.
-=======
-1.4 Ejecutar la Aplicación
-
-flutter run
-
-o simplemente presionando F5 en tu editor.
-
-
-2. Arquitectura del Proyecto 🏗️
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
 
 ---
 
@@ -76,16 +48,11 @@ lib/
 
 Esta separación facilita la **escalabilidad**, la **organización** y el **reemplazo futuro** de mock data por una API real.
 
-<<<<<<< HEAD
 ---
 
 ## 3. Estructura y Responsabilidades 📁
 
 ```
-=======
-3. Estructura y Responsabilidades 📁
-
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
 lib/
 ├── main.dart
 ├── data/
@@ -98,12 +65,7 @@ lib/
     └── widgets/
 ```
 
-<<<<<<< HEAD
 ### 3.1 `/data/`
-=======
-
-3.1 /data/
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
 
 Contiene los **modelos del dominio** y los **datos mock** usados para pruebas locales.
 
@@ -186,20 +148,6 @@ El proyecto utiliza:
 
 ### Flujo estándar:
 
-<<<<<<< HEAD
 1. Un **Notifier** contiene el estado (lista de productos, usuarios, …)
 2. La **UI** consume el estado vía `Consumer` o `Provider.of`
 3. Si cambia algo → `notifyListeners()` → la **UI se reconstruye automáticamente**
-=======
-Excelente para CRUD administrativos
-
-Curva de aprendizaje baja
-
-Flujo estándar:
-
-Un Notifier contiene el estado (lista de productos, usuarios,…)
-
-La UI consume el estado vía Consumer o Provider.of
-
-Si cambia algo → notifyListeners() → la UI se reconstruye automáticamente
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
