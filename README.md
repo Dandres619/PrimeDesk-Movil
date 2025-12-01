@@ -8,7 +8,6 @@
 1. Instalación y Configuración ⚙️
 
 1.1 Requisitos Previos
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
 
 Se debe tener:
 
@@ -32,7 +31,6 @@ Emulador Android o dispositivo físico
 
 git clone <https://github.com/Dandres619/PrimeDesk-Movil.git>
 
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
 cd nombre-del-proyecto
 ```
 
@@ -59,7 +57,6 @@ o simplemente presionando F5 en tu editor.
 
 
 2. Arquitectura del Proyecto 🏗️
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
 
 ---
 
@@ -85,7 +82,6 @@ Esta separación facilita la **escalabilidad**, la **organización** y el **reem
 =======
 3. Estructura y Responsabilidades 📁
 
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
 lib/
 ├── main.dart
 ├── data/
@@ -103,7 +99,6 @@ lib/
 =======
 
 3.1 /data/
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
 
 Contiene los **modelos del dominio** y los **datos mock** usados para pruebas locales.
 
@@ -202,4 +197,3 @@ Un Notifier contiene el estado (lista de productos, usuarios,…)
 La UI consume el estado vía Consumer o Provider.of
 
 Si cambia algo → notifyListeners() → la UI se reconstruye automáticamente
->>>>>>> 64e0e03f8c24cda2f9c73a1f17b8c7a67deeae24
